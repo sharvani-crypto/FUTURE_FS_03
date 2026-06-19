@@ -1,0 +1,144 @@
+{% extends "base.html" %}
+{% set active_page = 'home' %}
+{% import "icons.html" as icons %}
+
+{% block title %}The Rose Atelier — Considered Clothing, Accessories & Gifts{% endblock %}
+
+{% block content %}
+
+<!-- ═══════════════ Hero ═══════════════ -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-copy">
+      <span class="eyebrow">A Boutique of Considered Things</span>
+      <h1>Dressed in<br>blush&nbsp;&amp;&nbsp;rose&nbsp;gold.</h1>
+      <p class="hero-sub">
+        Clothing, accessories, and gifts chosen the way you'd choose
+        something for a friend — with care, with restraint, and a little romance.
+      </p>
+      <div class="hero-ctas">
+        <a href="{{ url_for('shop') }}" class="btn btn-primary">Shop the Atelier</a>
+        <a href="{{ url_for('about') }}" class="btn btn-outline">Our Story</a>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="frame-corner fc-tl"></div>
+      <div class="frame-corner fc-br"></div>
+      <div class="hero-img-block">
+        {{ icons.dress_icon() }}
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ Marquee strip ═══════════════ -->
+<div class="marquee-strip">
+  <div class="marquee-track">
+    <span>Clothing</span><span class="divider">·</span>
+    <span>Accessories</span><span class="divider">·</span>
+    <span>Gifts</span><span class="divider">·</span>
+    <span>Hand-Chosen</span><span class="divider">·</span>
+    <span>Clothing</span><span class="divider">·</span>
+    <span>Accessories</span><span class="divider">·</span>
+    <span>Gifts</span><span class="divider">·</span>
+    <span>Hand-Chosen</span><span class="divider">·</span>
+  </div>
+</div>
+
+<!-- ═══════════════ Featured Products ═══════════════ -->
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Most Loved</span>
+      <h2 class="ribbon-heading">Atelier Bestsellers</h2>
+      <p>The pieces our visitors return for, again and again.</p>
+    </div>
+
+    <div class="product-grid">
+      {% for product in featured %}
+      <div class="product-card fade-in-scroll">
+        <div class="product-frame">
+          {% if product.tag %}<span class="product-tag">{{ product.tag }}</span>{% endif %}
+          <div class="product-corner pc-tl"></div>
+          <div class="product-corner pc-br"></div>
+          {{ icons.product_icon(product.image) }}
+        </div>
+        <div class="product-info">
+          <h3>{{ product.name }}</h3>
+          <p class="product-desc">{{ product.description }}</p>
+          <div class="product-footer">
+            <span class="product-price">₹{{ '{:,}'.format(product.price) }}</span>
+            <form class="add-cart-form" action="{{ url_for('add_to_cart') }}" method="POST">
+              <input type="hidden" name="product_id" value="{{ product.id }}">
+              <input type="hidden" name="quantity" value="1">
+              <button type="submit" class="add-cart-btn">Add to Cart</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+
+    <div class="text-center mt-3">
+      <a href="{{ url_for('shop') }}" class="text-link">View the Full Collection &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ Brand Story Teaser ═══════════════ -->
+<section class="section" style="background: var(--ivory-deep);">
+  <div class="container">
+    <div class="story-split">
+      <div class="story-visual fade-in-scroll">
+        {{ icons.flower_icon() }}
+      </div>
+      <div class="story-copy fade-in-scroll">
+        <span class="eyebrow">From the Atelier</span>
+        <h2 class="ribbon-heading">A shelf, not a warehouse.</h2>
+        <p>
+          The Rose Atelier began as a single shelf of things we couldn't stop
+          recommending to friends — a silk dress that moved well, a candle
+          that made a room feel finished. It's grown since, but the rule
+          hasn't: if we wouldn't gift it, we don't stock it.
+        </p>
+        <p class="signature-quote">"Chosen, not collected."</p>
+        <div class="mt-2">
+          <a href="{{ url_for('about') }}" class="text-link">Read Our Full Story &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ Value Strip ═══════════════ -->
+<section class="section-sm">
+  <div class="container">
+    <div class="value-strip">
+      <div class="value-item fade-in-scroll">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">
+          <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+        </svg>
+        <h4>Chosen with Care</h4>
+        <p>Every piece is selected personally, never bulk-ordered.</p>
+      </div>
+      <div class="value-item fade-in-scroll">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">
+          <rect x="3" y="3" width="18" height="18" rx="2"/>
+          <path d="M3 9h18M9 21V9"/>
+        </svg>
+        <h4>Small Batches</h4>
+        <p>Limited quantities, so your find stays a little bit yours.</p>
+      </div>
+      <div class="value-item fade-in-scroll">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">
+          <path d="M20 12v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-6M16 6l-4-4-4 4M12 2v13"/>
+        </svg>
+        <h4>Thoughtful Packaging</h4>
+        <p>Wrapped the way a gift should be, even when it's for you.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

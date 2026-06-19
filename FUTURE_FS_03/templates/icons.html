@@ -1,0 +1,146 @@
+{# ═══════════════════════════════════════════════════════════
+   icons.html — Reusable elegant line-art SVG macros
+   Used as placeholder visuals for products, gallery, and blog
+   since no real photography is available for this mini-project.
+   ═══════════════════════════════════════════════════════════ #}
+
+{% macro dress_icon() %}
+<svg viewBox="0 0 100 120" fill="none" stroke="#B8895A" stroke-width="1.3">
+  <path d="M40 8 L35 22 L25 40 L20 110 L80 110 L75 40 L65 22 L60 8" stroke-linejoin="round"/>
+  <path d="M40 8 Q50 16 60 8" />
+  <path d="M35 22 L25 30 M65 22 L75 30" />
+  <line x1="50" y1="22" x2="50" y2="100" stroke-dasharray="2 4" opacity="0.5"/>
+</svg>
+{% endmacro %}
+
+{% macro blazer_icon() %}
+<svg viewBox="0 0 100 120" fill="none" stroke="#B8895A" stroke-width="1.3">
+  <path d="M30 14 L18 30 L18 105 L82 105 L82 30 L70 14" stroke-linejoin="round"/>
+  <path d="M30 14 L50 35 L70 14" />
+  <path d="M50 35 L42 105 M50 35 L58 105" stroke-dasharray="2 4" opacity="0.5"/>
+  <circle cx="46" cy="55" r="1.6" fill="#B8895A"/>
+  <circle cx="46" cy="68" r="1.6" fill="#B8895A"/>
+</svg>
+{% endmacro %}
+
+{% macro skirt_icon() %}
+<svg viewBox="0 0 100 100" fill="none" stroke="#B8895A" stroke-width="1.3">
+  <path d="M32 10 L68 10 L88 90 L12 90 Z" stroke-linejoin="round"/>
+  <path d="M38 10 L24 90 M50 10 L46 90 M62 10 L70 90" opacity="0.5" stroke-dasharray="2 4"/>
+</svg>
+{% endmacro %}
+
+{% macro sweater_icon() %}
+<svg viewBox="0 0 100 100" fill="none" stroke="#B8895A" stroke-width="1.3">
+  <path d="M30 10 L18 22 L26 32 L30 26 L30 90 L70 90 L70 26 L74 32 L82 22 L70 10 Q50 18 30 10 Z" stroke-linejoin="round"/>
+</svg>
+{% endmacro %}
+
+{% macro earrings_icon() %}
+<svg viewBox="0 0 100 100" fill="none" stroke="#B8895A" stroke-width="1.3">
+  <circle cx="35" cy="18" r="4"/>
+  <circle cx="35" cy="50" r="20"/>
+  <circle cx="65" cy="18" r="4"/>
+  <circle cx="65" cy="50" r="20"/>
+</svg>
+{% endmacro %}
+
+{% macro hairclip_icon() %}
+<svg viewBox="0 0 100 100" fill="none" stroke="#B8895A" stroke-width="1.3">
+  <path d="M20 50 Q35 25 50 50 Q65 75 80 50" stroke-linecap="round"/>
+  <path d="M50 50 Q55 45 60 50 Q55 55 50 50 Z" fill="#B8895A" opacity="0.3"/>
+</svg>
+{% endmacro %}
+
+{% macro necklace_icon() %}
+<svg viewBox="0 0 100 100" fill="none" stroke="#B8895A" stroke-width="1.3">
+  <path d="M15 20 Q50 75 85 20" />
+  <circle cx="50" cy="70" r="6" fill="#B8895A" opacity="0.3"/>
+  <circle cx="36" cy="58" r="2"/><circle cx="64" cy="58" r="2"/>
+</svg>
+{% endmacro %}
+
+{% macro bag_icon() %}
+<svg viewBox="0 0 100 100" fill="none" stroke="#B8895A" stroke-width="1.3">
+  <path d="M25 38 Q25 18 50 18 Q75 18 75 38" />
+  <rect x="18" y="38" width="64" height="50" rx="4" stroke-linejoin="round"/>
+  <circle cx="50" cy="58" r="3" fill="#B8895A" opacity="0.4"/>
+</svg>
+{% endmacro %}
+
+{% macro scrunchie_icon() %}
+<svg viewBox="0 0 100 100" fill="none" stroke="#B8895A" stroke-width="1.3">
+  <circle cx="50" cy="50" r="32"/>
+  <circle cx="50" cy="50" r="22" stroke-dasharray="3 3" opacity="0.6"/>
+</svg>
+{% endmacro %}
+
+{% macro candle_icon() %}
+<svg viewBox="0 0 100 100" fill="none" stroke="#B8895A" stroke-width="1.3">
+  <rect x="32" y="40" width="36" height="48" rx="3"/>
+  <ellipse cx="50" cy="40" rx="18" ry="4"/>
+  <path d="M50 30 Q47 22 50 16 Q53 22 50 30 Z" fill="#B8895A" opacity="0.4"/>
+</svg>
+{% endmacro %}
+
+{% macro giftbox_icon() %}
+<svg viewBox="0 0 100 100" fill="none" stroke="#B8895A" stroke-width="1.3">
+  <rect x="18" y="38" width="64" height="46" stroke-linejoin="round"/>
+  <line x1="50" y1="38" x2="50" y2="84"/>
+  <path d="M50 38 Q35 18 22 30 Q35 42 50 38 Q65 42 78 30 Q65 18 50 38 Z" fill="#B8895A" opacity="0.25"/>
+</svg>
+{% endmacro %}
+
+{% macro tote_icon() %}
+<svg viewBox="0 0 100 100" fill="none" stroke="#B8895A" stroke-width="1.3">
+  <path d="M28 32 L24 88 L76 88 L72 32 Z" stroke-linejoin="round"/>
+  <path d="M36 32 Q36 16 50 16 Q64 16 64 32"/>
+  <circle cx="50" cy="58" r="9" opacity="0.5"/>
+</svg>
+{% endmacro %}
+
+{% macro dish_icon() %}
+<svg viewBox="0 0 100 100" fill="none" stroke="#B8895A" stroke-width="1.3">
+  <ellipse cx="50" cy="55" rx="38" ry="14"/>
+  <ellipse cx="50" cy="50" rx="38" ry="14"/>
+  <path d="M12 50 Q12 75 50 78 Q88 75 88 50" stroke-dasharray="2 4" opacity="0.5"/>
+</svg>
+{% endmacro %}
+
+{% macro flower_icon() %}
+<svg viewBox="0 0 100 100" fill="none" stroke="#B8895A" stroke-width="1.3">
+  <circle cx="50" cy="50" r="8" fill="#B8895A" opacity="0.4"/>
+  <ellipse cx="50" cy="28" rx="9" ry="16"/>
+  <ellipse cx="50" cy="72" rx="9" ry="16"/>
+  <ellipse cx="28" cy="50" rx="16" ry="9"/>
+  <ellipse cx="72" cy="50" rx="16" ry="9"/>
+</svg>
+{% endmacro %}
+
+{% macro generic_icon() %}
+<svg viewBox="0 0 100 100" fill="none" stroke="#B8895A" stroke-width="1.3">
+  <rect x="22" y="22" width="56" height="56" rx="4"/>
+  <path d="M22 60 L40 42 L55 55 L78 35" />
+  <circle cx="38" cy="36" r="5"/>
+</svg>
+{% endmacro %}
+
+{# Map a product image filename keyword to the right icon macro #}
+{% macro product_icon(image) %}
+  {% if 'dress' in image %}{{ dress_icon() }}
+  {% elif 'blazer' in image %}{{ blazer_icon() }}
+  {% elif 'skirt' in image %}{{ skirt_icon() }}
+  {% elif 'sweater' in image %}{{ sweater_icon() }}
+  {% elif 'earrings' in image %}{{ earrings_icon() }}
+  {% elif 'hairclip' in image %}{{ hairclip_icon() }}
+  {% elif 'necklace' in image %}{{ necklace_icon() }}
+  {% elif 'bag' in image %}{{ bag_icon() }}
+  {% elif 'scrunchie' in image %}{{ scrunchie_icon() }}
+  {% elif 'candle' in image %}{{ candle_icon() }}
+  {% elif 'giftbox' in image %}{{ giftbox_icon() }}
+  {% elif 'tote' in image %}{{ tote_icon() }}
+  {% elif 'dish' in image %}{{ dish_icon() }}
+  {% elif 'look' in image or 'blog' in image %}{{ flower_icon() }}
+  {% else %}{{ generic_icon() }}
+  {% endif %}
+{% endmacro %}

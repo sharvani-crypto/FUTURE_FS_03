@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+{% set active_page = 'shop' %}
+{% import "icons.html" as icons %}
+
+{% block title %}Shop — The Rose Atelier{% endblock %}
+
+{% block content %}
+
+<section class="page-header">
+  <div class="container">
+    <span class="eyebrow">The Full Collection</span>
+    <h1>Shop the Atelier</h1>
+    <p>Clothing, accessories, and gifts — each chosen for a reason.</p>
+  </div>
+</section>
+
+<section class="section" style="padding-top: 50px;">
+  <div class="container">
+
+    <!-- Category Filter -->
+    <div class="filter-row">
+      <a href="{{ url_for('shop') }}" class="filter-pill {{ 'active' if active_category == 'all' }}">
+        All
+      </a>
+      <a href="{{ url_for('shop') }}?category=clothing" class="filter-pill {{ 'active' if active_category == 'clothing' }}">
+        Clothing
+      </a>
+      <a href="{{ url_for('shop') }}?category=accessories" class="filter-pill {{ 'active' if active_category == 'accessories' }}">
+        Accessories
+      </a>
+      <a href="{{ url_for('shop') }}?category=gifts" class="filter-pill {{ 'active' if active_category == 'gifts' }}">
+        Gifts
+      </a>
+    </div>
+
+    {% if products %}
+    <div class="product-grid">
+      {% for product in products %}
+      <div class="product-card fade-in-scroll">
+        <div class="product-frame">
+          {% if product.tag %}<span class="product-tag">{{ product.tag }}</span>{% endif %}
+          <div class="product-corner pc-tl"></div>
+          <div class="product-corner pc-br"></div>
+          {{ icons.product_icon(product.image) }}
+        </div>
+        <div class="product-info">
+          <h3>{{ product.name }}</h3>
+          <p class="product-desc">{{ product.description }}</p>
+          <div class="product-footer">
+            <span class="product-price">₹{{ '{:,}'.format(product.price) }}</span>
+            <form class="add-cart-form" action="{{ url_for('add_to_cart') }}" method="POST">
+              <input type="hidden" name="product_id" value="{{ product.id }}">
+              <input type="hidden" name="quantity" value="1">
+              <button type="submit" class="add-cart-btn">Add to Cart</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    {% else %}
+    <div class="empty-cart">
+      <h3>No products in this category yet.</h3>
+      <p>Please check back soon, or browse another category.</p>
+      <a href="{{ url_for('shop') }}" class="btn btn-outline">View All Products</a>
+    </div>
+    {% endif %}
+
+  </div>
+</section>
+
+{% endblock %}

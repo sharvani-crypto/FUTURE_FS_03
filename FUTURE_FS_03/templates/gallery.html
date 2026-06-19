@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% set active_page = 'gallery' %}
+{% import "icons.html" as icons %}
+
+{% block title %}Lookbook — The Rose Atelier{% endblock %}
+
+{% block content %}
+
+<section class="page-header">
+  <div class="container">
+    <span class="eyebrow">The Lookbook</span>
+    <h1>Styled, not staged.</h1>
+    <p>A few moments from how our pieces actually get worn and gifted.</p>
+  </div>
+</section>
+
+<section class="section" style="padding-top: 50px;">
+  <div class="container">
+    <div class="gallery-grid">
+      {% for item in images %}
+      <div class="gallery-item fade-in-scroll {{ 'g-tall' if loop.index in [1, 6] }}">
+        {{ icons.flower_icon() }}
+        <div class="gallery-caption">{{ item.caption }}</div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section-sm" style="background: var(--ivory-deep);">
+  <div class="container text-center">
+    <h2 class="ribbon-heading mt-1">Loved something here?</h2>
+    <p class="mt-1" style="max-width:480px; margin:14px auto 30px;">
+      Most of what you see in the lookbook is available in the shop right now.
+    </p>
+    <a href="{{ url_for('shop') }}" class="btn btn-primary">Shop the Collection</a>
+  </div>
+</section>
+
+{% endblock %}

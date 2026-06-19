@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% set active_page = 'blog' %}
+{% import "icons.html" as icons %}
+
+{% block title %}Journal — The Rose Atelier{% endblock %}
+
+{% block content %}
+
+<section class="page-header">
+  <div class="container">
+    <span class="eyebrow">The Journal</span>
+    <h1>Notes on style &amp; gifting.</h1>
+    <p>Short reads from the Atelier — on dressing well and choosing well.</p>
+  </div>
+</section>
+
+<section class="section" style="padding-top: 50px;">
+  <div class="container">
+    <div class="blog-grid">
+      {% for post in posts %}
+      <a href="{{ url_for('blog_post', post_id=post.id) }}" class="blog-card fade-in-scroll">
+        <div class="blog-thumb">
+          {{ icons.flower_icon() }}
+        </div>
+        <div class="blog-body">
+          <span class="blog-date">
+            {{ post.date }}
+          </span>
+          <h3>{{ post.title }}</h3>
+          <p class="blog-excerpt">{{ post.excerpt }}</p>
+          <span class="text-link">Read the Note &rarr;</span>
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,108 @@
+{% extends "base.html" %}
+{% set active_page = 'about' %}
+{% import "icons.html" as icons %}
+
+{% block title %}Our Story — The Rose Atelier{% endblock %}
+
+{% block content %}
+
+<section class="page-header">
+  <div class="container">
+    <span class="eyebrow">Our Story</span>
+    <h1>A boutique built on one rule.</h1>
+    <p>If we wouldn't gift it to someone we love, it doesn't make the shelf.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="story-split">
+      <div class="story-visual fade-in-scroll">
+        {{ icons.flower_icon() }}
+      </div>
+      <div class="story-copy fade-in-scroll">
+        <span class="eyebrow">How We Began</span>
+        <h2 class="ribbon-heading">A shelf, then a room, then an atelier.</h2>
+        <p>
+          The Rose Atelier started small — a single shelf in the back of a
+          friend's café, holding a handful of dresses and a few candles we'd
+          made ourselves. People kept asking where things came from. Eventually
+          the shelf needed a room, and the room needed a name.
+        </p>
+        <p>
+          We chose "atelier" deliberately. Not a shop, not a store — a
+          workshop, a place where things are considered before they're made
+          available. That's still how we operate today, even as the room has
+          grown.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background: var(--ivory-deep);">
+  <div class="container">
+    <div class="story-split reverse">
+      <div class="story-visual fade-in-scroll">
+        {{ icons.dish_icon() }}
+      </div>
+      <div class="story-copy fade-in-scroll">
+        <span class="eyebrow">What We Believe</span>
+        <h2 class="ribbon-heading">Quality over quantity, always.</h2>
+        <p>
+          We keep our catalog deliberately small. Every piece — every dress,
+          every earring, every candle — is chosen by hand, in limited
+          quantities, so that what you find here doesn't feel mass-produced.
+        </p>
+        <p>
+          We'd rather sell out of something wonderful than restock something
+          ordinary. It means we say no to a lot of suppliers. It also means
+          you can trust that what's on our shelves is here because someone
+          loved it first.
+        </p>
+        <p class="signature-quote">"We don't stock trends. We stock things that age well."</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">A Note from the Founder</span>
+      <h2 class="ribbon-heading">Why this, why now.</h2>
+    </div>
+    <div class="blog-post-content fade-in-scroll" style="text-align:left;">
+      <p>
+        I opened The Rose Atelier because I was tired of choosing between
+        "cheap and forgettable" and "beautiful but impersonal." I wanted a
+        place where the person behind the counter could tell you why a piece
+        was chosen — not just what it cost.
+      </p>
+      <p style="margin-top:18px;">
+        Every item here has a small story: a maker we met, a fabric that
+        felt different in person, a gift someone asked us to recreate for
+        a second time. We're a small team, and we like it that way. It
+        means we still know every product on this site by name.
+      </p>
+      <p style="margin-top:18px;">
+        Thank you for visiting — whether you're here for a dress, a gift,
+        or just to look around. We hope something here feels like it was
+        chosen for you.
+      </p>
+      <p class="signature-quote" style="margin-top:30px;">— The Rose Atelier Team</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-sm" style="background: var(--ink);">
+  <div class="container text-center">
+    <h2 style="color: var(--ivory); margin-bottom: 20px;">Come see it in person.</h2>
+    <p style="color: rgba(250,243,239,0.7); max-width:480px; margin: 0 auto 32px;">
+      Our shelves are best experienced in the room they were built for.
+    </p>
+    <a href="{{ url_for('contact') }}" class="btn btn-rose">Visit the Atelier</a>
+  </div>
+</section>
+
+{% endblock %}

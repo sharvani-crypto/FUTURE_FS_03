@@ -1,0 +1,119 @@
+[
+  {
+    "id": "p001",
+    "name": "Blush Silk Wrap Dress",
+    "category": "clothing",
+    "price": 4899,
+    "image": "dress1.jpg",
+    "description": "A fluid silk wrap dress in dusty rose, finished with a delicate self-tie sash. Cut to move beautifully from day into evening.",
+    "tag": "Bestseller"
+  },
+  {
+    "id": "p002",
+    "name": "Ivory Linen Blazer",
+    "category": "clothing",
+    "price": 5499,
+    "image": "blazer1.jpg",
+    "description": "Tailored linen blazer in soft ivory with rose-gold buttons. A versatile layer for the modern atelier wardrobe.",
+    "tag": "New"
+  },
+  {
+    "id": "p003",
+    "name": "Rosewater Pleated Skirt",
+    "category": "clothing",
+    "price": 3299,
+    "image": "skirt1.jpg",
+    "description": "Knife-pleated midi skirt in a muted rosewater tone, with a fluid drape that catches the light as you move.",
+    "tag": ""
+  },
+  {
+    "id": "p004",
+    "name": "Cloud Cashmere Sweater",
+    "category": "clothing",
+    "price": 6199,
+    "image": "sweater1.jpg",
+    "description": "An impossibly soft cashmere knit in warm blush, designed for an oversized, effortless silhouette.",
+    "tag": "Limited"
+  },
+  {
+    "id": "p101",
+    "name": "Rose Gold Hoop Earrings",
+    "category": "accessories",
+    "price": 1899,
+    "image": "earrings1.jpg",
+    "description": "Hand-finished rose gold hoops with a subtle hammered texture, light enough for everyday wear.",
+    "tag": "Bestseller"
+  },
+  {
+    "id": "p102",
+    "name": "Velvet Bow Hair Clip",
+    "category": "accessories",
+    "price": 699,
+    "image": "hairclip1.jpg",
+    "description": "A plush velvet bow clip in blush pink, the kind of small detail that finishes an entire look.",
+    "tag": ""
+  },
+  {
+    "id": "p103",
+    "name": "Pearl & Rose Gold Necklace",
+    "category": "accessories",
+    "price": 2799,
+    "image": "necklace1.jpg",
+    "description": "Freshwater pearls strung on a fine rose gold chain, layered for a soft, romantic neckline.",
+    "tag": "New"
+  },
+  {
+    "id": "p104",
+    "name": "Blush Leather Mini Bag",
+    "category": "accessories",
+    "price": 4299,
+    "image": "bag1.jpg",
+    "description": "A structured mini bag in buttery blush leather, with a detachable rose-gold chain strap.",
+    "tag": "Bestseller"
+  },
+  {
+    "id": "p105",
+    "name": "Satin Hair Scrunchie Set",
+    "category": "accessories",
+    "price": 549,
+    "image": "scrunchie1.jpg",
+    "description": "A set of three satin scrunchies in rose, cream, and champagne — gentle on hair, lovely on a wrist.",
+    "tag": ""
+  },
+  {
+    "id": "p201",
+    "name": "Rose Petal Scented Candle",
+    "category": "gifts",
+    "price": 1299,
+    "image": "candle1.jpg",
+    "description": "Hand-poured soy candle in a reusable ceramic vessel, scented with rose petal and soft musk.",
+    "tag": "Bestseller"
+  },
+  {
+    "id": "p202",
+    "name": "Atelier Gift Box",
+    "category": "gifts",
+    "price": 2499,
+    "image": "giftbox1.jpg",
+    "description": "A curated keepsake box wrapped in blush ribbon, containing a candle, a hair accessory, and a handwritten card.",
+    "tag": "New"
+  },
+  {
+    "id": "p203",
+    "name": "Linen Tote with Rose Embroidery",
+    "category": "gifts",
+    "price": 1599,
+    "image": "tote1.jpg",
+    "description": "An ivory linen tote, hand-embroidered with a single rose motif. Roomy enough for everyday errands.",
+    "tag": ""
+  },
+  {
+    "id": "p204",
+    "name": "Rose Gold Jewelry Dish",
+    "category": "gifts",
+    "price": 999,
+    "image": "dish1.jpg",
+    "description": "A ceramic trinket dish with a hand-painted rose gold rim, perfect for rings and earrings at day's end.",
+    "tag": "Limited"
+  }
+]

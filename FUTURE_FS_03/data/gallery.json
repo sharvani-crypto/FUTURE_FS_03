@@ -1,0 +1,10 @@
+[
+  { "id": "g1", "image": "look1.jpg", "caption": "Morning market, blush silk" },
+  { "id": "g2", "image": "look2.jpg", "caption": "Linen and rose gold" },
+  { "id": "g3", "image": "look3.jpg", "caption": "Evening sash, side-tied" },
+  { "id": "g4", "image": "look4.jpg", "caption": "Cashmere on a quiet Sunday" },
+  { "id": "g5", "image": "look5.jpg", "caption": "Pleats in motion" },
+  { "id": "g6", "image": "look6.jpg", "caption": "The gifting shelf" },
+  { "id": "g7", "image": "look7.jpg", "caption": "Pearls layered low" },
+  { "id": "g8", "image": "look8.jpg", "caption": "Atelier window, golden hour" }
+]
